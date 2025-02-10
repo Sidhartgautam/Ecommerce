@@ -51,11 +51,13 @@ INSTALLED_APPS = [
     'products',
     'orders',
     'carts',
-    'reviews'
+    'reviews',
+    'corsheaders',
 ]
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -181,6 +183,34 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://hotel-production-f109.up.railway.app"
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000"
+
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+
+CORS_ALLOWED_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOW_HEADERS = [
+    'authorization',
+    'content-type',
+    'X-Country-Code',
+]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

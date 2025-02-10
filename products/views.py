@@ -1,0 +1,109 @@
+from .serializers import ProductListSerializer,ProductDetailSerializer
+from .models import Product
+from rest_framework import generics
+from django.http import Http404
+from core.utils.pagination import CustomPageNumberPagination
+from core.utils.response import PrepareResponse
+
+class ProductListView(generics.ListAPIView):
+    serializer_class = ProductListSerializer
+    pagination_class = CustomPageNumberPagination
+
+    def get_queryset(self):
+        return Product.objects.filter(is_active=True)
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            page = self.paginate_queryset(queryset)
+
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                paginated_response = self.get_paginated_response(serializer.data)
+                response_data = {
+                    "products": paginated_response["results"],
+                    "meta": {
+                        "page_number": paginated_response["page_number"],
+                        "total_pages": paginated_response["total_pages"],
+                        "total_items": paginated_response["count"],
+                        "links": paginated_response["links"],
+                    },
+                }
+                return PrepareResponse(
+                    success=True,
+                    message="List of products",
+                    data=response_data
+                ).send(code=200)
+            
+            serializer = self.get_serializer(queryset, many=True)
+            return PrepareResponse(
+                success=True,
+                message="List of products",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while fetching the product list.",
+                errors={"detail": str(e)}
+            ).send(code=500)
+        
+class ProductDetailView(generics.RetrieveAPIView):
+    serializer_class = ProductDetailSerializer
+    lookup_field = 'slug'
+
+    def get_queryset(self):
+        return Product.objects.filter(is_active=True)
+
+    def retrieve(self, request, *args, **kwargs):
+        try:
+            product = self.get_object()
+            serializer = self.get_serializer(product)
+            return PrepareResponse(
+                success=True,
+                message="Product details retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Product.DoesNotExist:
+            return PrepareResponse(
+                success=False,
+                message="Product not found.",
+                errors={"slug": "No product found with the provided slug."}
+            ).send(code=404)
+        
+class RecommendedProductsView(generics.ListAPIView):
+    serializer_class = ProductListSerializer
+
+    def get_queryset(self):
+        current_product_slug = self.request.query_params.get('product_slug') 
+        try:
+            current_product = Product.objects.get(slug=current_product_slug)
+        except Product.DoesNotExist:
+            return Product.objects.none()
+        recommended_products = Product.objects.filter(is_active=True).exclude(id=current_product.id)
+        category_products = recommended_products.filter(category=current_product.category)
+        brand_products = recommended_products.filter(brand=current_product.brand)
+        recommended_products = (category_products | brand_products).distinct()[:10]
+
+        return recommended_products
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+            return PrepareResponse(
+                success=True,
+                message="Recommended products retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while fetching recommended products.",
+                errors={"detail": str(e)}
+            ).send(code=500)
+    
+    

@@ -40,14 +40,18 @@ class ProductDetailSerializer(serializers.ModelSerializer):
         return None
 
     def get_format_options(self, obj):
-        if not obj.is_variant:
-            # Fetch all variants linked to this product
+        if obj.is_variant and obj.parent_product:
+            # Variant: Include current product, parent product, and sibling variants
+            parent_product = obj.parent_product
+            sibling_variants = parent_product.variants.exclude(id=obj.id)
+            products = [obj, parent_product] + list(sibling_variants)
+        else:
+            # Parent product: Include itself and all its variants
             variants = obj.variants.all()
-            return ProductVariantOptionSerializer(variants, many=True).data
-        elif obj.parent_product:
-            # Fetch all siblings (variants) under the same parent product
-            return ProductVariantOptionSerializer(obj.parent_product.variants.all(), many=True).data
-        return []
+            products = [obj] + list(variants)
+
+        # Serialize and return the ordered format options
+        return ProductVariantOptionSerializer(products, many=True).data
 class ProductListSerializer(serializers.ModelSerializer):
     final_price = serializers.SerializerMethodField()
     discount_label = serializers.SerializerMethodField()

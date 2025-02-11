@@ -4,7 +4,7 @@ from core.utils.slugify import unique_slug_generator
 # Category Model
 class Category(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, null=True, blank=True)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='subcategories')
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='category_images/', blank=True, null=True)
@@ -30,7 +30,7 @@ class Brand(models.Model):
 # Product Model
 class Product(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, null=True, blank=True)
     description = models.TextField()
@@ -44,9 +44,29 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def check_status(self):
+        required_fields = [self.name, self.description, self.price, self.stock_quantity, self.category]
+        if any(field is None or field == '' for field in required_fields):
+            return "Incomplete (Product data missing)"
+        if not self.attributes.exists():
+            return "Incomplete (No attributes)"
+        if not self.images.exists():
+            return "Incomplete (No images)"
+        if self.variants.exists():
+            for variant in self.variants.all():
+                if not (variant.name and variant.price and variant.stock_quantity):
+                    return "Incomplete (Variant data missing)"
+
+        return "Complete"
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = unique_slug_generator(self, self.name)
+        if self.parent_product:
+            self.category = self.parent_product.category
+            self.brand = self.parent_product.brand
+        if self.parent_product:
+            self.is_variant = True
         super().save(*args, **kwargs)
 
     def __str__(self):

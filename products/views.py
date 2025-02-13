@@ -4,10 +4,12 @@ from rest_framework import generics
 from django.http import Http404
 from core.utils.pagination import CustomPageNumberPagination
 from core.utils.response import PrepareResponse
+from rest_framework.permissions import AllowAny
 
 class ProductListView(generics.ListAPIView):
     serializer_class = ProductListSerializer
     pagination_class = CustomPageNumberPagination
+    permission_classes = [AllowAny]
 
     def get_queryset(self):
         return Product.objects.filter(is_active=True)
@@ -51,6 +53,7 @@ class ProductListView(generics.ListAPIView):
         
 class ProductDetailView(generics.RetrieveAPIView):
     serializer_class = ProductDetailSerializer
+    permission_classes=[AllowAny]
     lookup_field = 'slug'
 
     def get_queryset(self):

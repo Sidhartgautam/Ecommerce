@@ -1,57 +1,93 @@
-JAZZMIN_SETTINGS = {
-    "site_title": "My E-commerce Admin",
-    "site_header": "E-commerce Dashboard",
-    "site_brand": "E-commerce Admin",
-    "welcome_sign": "Welcome to the E-commerce Admin Panel!",
-    "copyright": "E-commerce",
-    "search_model": "product.Product",  # Enable global search on the Product model
-    "user_avatar": None,  # Customize if you have user profile pictures
 
-    # Custom top menu links
+# jazzmin.py
+
+JAZZMIN_SETTINGS = {
+    # Branding
+    "site_title": "House Of Nepal Admin",
+    "site_header": "House Of Nepal",
+    "site_brand": "House Of Nepal",
+    "welcome_sign": "Welcome to the House Of Nepal",
+    "copyright": "© 2025 House Of Nepal",
+    "search_model": "products.Product",
+    "show_ui_builder":True,
+
+    # Top menu links
     "topmenu_links": [
         {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"name": "Products", "url": "/admin/product/product/", "permissions": ["product.view_product"]},
+        {"app": "products"},
+        {"name": "Support", "url": "https://support.moredealsclub.com", "new_window": True},
     ],
 
-    # Apps displayed in the side menu
-    "show_sidebar": True,
-    "navigation_expanded": True,
-    "hide_apps": [],
-    "hide_models": [],
-    "order_with_respect_to": ["auth", "product", "order"],
-
-    # Custom icons for apps/models (using FontAwesome icons)
-    "icons": {
+    # Applications to display in the sidebar
+    "apps_icons": {
         "auth": "fas fa-users-cog",
-        "auth.user": "fas fa-user",
-        "auth.Group": "fas fa-users",
-        "product.Product": "fas fa-box",
-        "order.Order": "fas fa-shopping-cart",
+        "country": "fas fa-globe",
+        "currency": "fas fa-money-bill",
+        "faq": "fas fa-question-circle",
+        "offers": "fas fa-tags",
+        "property": "fas fa-building",
+        "reviews": "fas fa-star",
+        "rooms": "fas fa-bed",
+        "users": "fas fa-user",
     },
 
-    # Custom related models to be shown in detail views
-    "related_modal_active": True,
+    "icons": {
+        "auth.Group": "fas fa-users",
+        "auth.User": "fas fa-user",
+    },
 
-    # Customize the appearance
+    # UI Customizations
+    "show_sidebar": True,
+    "navigation_expanded": True,
     "custom_css": None,
     "custom_js": None,
-    "theme": "lux",  # Available themes: darkly, cyborg, flatly, lumen, lux, etc.
+    "related_modal_active": True,
+    "use_google_fonts_cdn": True,
+    "changeform_format":"horizantal_tabs",
+
+    # Footer
+    "footer_text": "© 2025 MoreLiving. All rights reserved.",
+
+    # Custom icons for apps and models
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
 }
 
-# Optional: Jazzmin UI Tweaks
 JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": False,
+    "navbar_small_text": True,
+    "footer_small_text": True,
     "body_small_text": False,
     "brand_small_text": False,
-    "brand_colour": "navbar-dark",
+    "brand_colour": False,
     "accent": "accent-primary",
-    "navbar": "navbar-dark bg-primary",
-    "no_navbar_border": True,
+    "navbar": "navbar-white navbar-light",
+    "no_navbar_border": False,
+    "sidebar_disable_expand": False,
+    "sidebar_auto_collapse": True,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-primary",
     "sidebar_nav_small_text": True,
     "sidebar_disable_expand": False,
     "sidebar_nav_child_indent": True,
     "sidebar_nav_compact_style": False,
-    "theme": "lux",
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": True,
+    "theme": "default",
     "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    },
+    "changeform_format": "horizontal_tabs", 
+    "form_submit_sticky": False,
+    "form_inline_expand_width": True,
+    "inline_stacked_controls": False,
+    "actions_sticky_top": True
 }

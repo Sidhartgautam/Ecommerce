@@ -7,6 +7,21 @@ class CategoryListSerializer(serializers.ModelSerializer):
         model = Category
         fields = ['id', 'name', 'slug','image']
 
+class BrandSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Brand
+        fields = ['id', 'name', 'logo', 'description']
+
+class CategorySerializer(serializers.ModelSerializer):
+    subcategories = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'slug', 'image','subcategories']
+
+    def get_subcategories(self, obj):
+        return CategorySerializer(obj.subcategories.all(), many=True).data
+
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductImage
@@ -48,16 +63,12 @@ class ProductDetailSerializer(serializers.ModelSerializer):
 
     def get_format_options(self, obj):
         if obj.is_variant and obj.parent_product:
-            # Variant: Include current product, parent product, and sibling variants
             parent_product = obj.parent_product
             sibling_variants = parent_product.variants.exclude(id=obj.id)
             products = [obj, parent_product] + list(sibling_variants)
         else:
-            # Parent product: Include itself and all its variants
             variants = obj.variants.all()
             products = [obj] + list(variants)
-
-        # Serialize and return the ordered format options
         return ProductVariantOptionSerializer(products, many=True).data
 class ProductListSerializer(serializers.ModelSerializer):
     final_price = serializers.SerializerMethodField()
@@ -95,3 +106,39 @@ class ProductListSerializer(serializers.ModelSerializer):
         if image:
             return image.image.url
         return None
+    
+class PopularProductSerializer(serializers.ModelSerializer):
+    final_price = serializers.SerializerMethodField()
+    discount_label = serializers.SerializerMethodField()
+    image = serializers.SerializerMethodField()
+    orders_count = serializers.IntegerField(read_only=True)
+    rating = serializers.SerializerMethodField()
+    reviews_count = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Product
+        fields = [
+            'id', 'name', 'slug', 'price', 'final_price', 'discount_label',
+            'orders_count', 'image', 'rating', 'reviews_count'
+        ]
+
+    def get_final_price(self, obj):
+        return obj.get_final_price()
+
+    def get_discount_label(self, obj):
+        if obj.discount_percentage > 0:
+            return f"{obj.discount_percentage}% OFF"
+        return None
+
+    def get_image(self, obj):
+        image = obj.images.first()
+        return image.image.url if image else None
+    
+    def get_rating(self, obj):
+        reviews = obj.reviews.all()
+        if reviews.exists():
+            return round(reviews.aggregate(models.Avg('rating'))['rating__avg'], 1)
+        return None
+
+    def get_reviews_count(self, obj):
+        return obj.reviews.count()

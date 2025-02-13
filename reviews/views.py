@@ -48,4 +48,28 @@ class CreateReviewView(generics.CreateAPIView):
                 message="An error occurred while creating the review.",
                 errors={"detail": str(e)}
             ).send(code=500)
+        
+class UserReviewListView(generics.ListAPIView):
+    serializer_class = ReviewSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Review.objects.filter(user=self.request.user).order_by('-created_at')
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+            return PrepareResponse(
+                success=True,
+                message="List of user reviews",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while fetching user reviews.",
+                errors={"detail": str(e)}
+            ).send(code=500)
 

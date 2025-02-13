@@ -4,10 +4,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.conf import settings
 from rest_framework import status
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from .models import CustomUser
 from django.contrib.auth import authenticate
-from .serializers import CustomUserSerializer
+from .serializers import CustomUserSerializer, UserProfileSerializer
 from django.contrib.auth.hashers import make_password
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -59,9 +59,20 @@ class RegisterUserView(APIView):
         serializer = CustomUserSerializer(data=data)
 
         if serializer.is_valid():
-            # Hash the password before saving the user
-            serializer.save(password=make_password(data.get('password')))
-            return Response({"message": "User registered successfully."}, status=status.HTTP_201_CREATED)
+            user = serializer.save()
+            refresh = RefreshToken.for_user(user)
+
+            return Response({
+                "message": "User registered successfully.",
+                "access": str(refresh.access_token),
+                "refresh": str(refresh),
+                "user": {
+                    "id": user.id,
+                    "username": user.username,
+                    "email": user.email
+                }
+            }, status=status.HTTP_201_CREATED)
+
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class LoginUserView(APIView):
@@ -70,13 +81,39 @@ class LoginUserView(APIView):
     def post(self, request, *args, **kwargs):
         username = request.data.get('username')
         password = request.data.get('password')
-
         user = authenticate(username=username, password=password)
-        if user is not None:
+        if user is None:
+            user = CustomUser.objects.filter(email=username).first()
+            if user:
+                user = authenticate(username=user.username, password=password)
+
+        if user:
             refresh = RefreshToken.for_user(user)
             return Response({
                 "access": str(refresh.access_token),
                 "refresh": str(refresh),
                 "message": "Login successful"
             }, status=status.HTTP_200_OK)
+
         return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
+    
+
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        """ Fetch logged-in user's profile """
+        user = request.user
+        serializer = UserProfileSerializer(user)
+        return Response({"success": True, "user": serializer.data}, status=status.HTTP_200_OK)
+
+    def patch(self, request, *args, **kwargs):
+        """ Update logged-in user's profile (except email & username) """
+        user = request.user
+        serializer = UserProfileSerializer(user, data=request.data, partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"success": True, "message": "Profile updated successfully.", "user": serializer.data}, status=status.HTTP_200_OK)
+        
+        return Response({"success": False, "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

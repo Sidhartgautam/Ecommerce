@@ -40,19 +40,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',  # DRF for REST API
-    'django.contrib.sites',  # For allauth
-    'allauth',  # Allauth for Google OAuth
+    'rest_framework',
+    'django.contrib.sites',
+    'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',  # Google OAuth provider
-    'rest_framework_simplejwt',  # For JWT Authentication
+    'allauth.socialaccount.providers.google', 
+    'rest_framework_simplejwt', 
+     'drf_spectacular', 
     'users', 
     'products',
     'orders',
     'carts',
     'reviews',
     'corsheaders',
+    'search'
 ]
 SITE_ID = 1
 
@@ -175,6 +177,23 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
+    "DEFAULT_SCHEMA_CLASS":
+    "drf_spectacular.openapi.AutoSchema",
+    "DATETIME_FORMAT":
+    "%Y-%m-%dT%H:%M:%S",
+    "TEST_REQUEST_DEFAULT_FORMAT":
+    "json",
+    "DEFAULT_PAGINATION_CLASS":
+    "rest_framework.pagination.LimitOffsetPagination",
+}
+SPECTACULAR_SETTINGS = {
+    "TITLE": "MoreTechGlobal User Modules API Document",
+    "DESCRIPTION": "Welcome to MoreTechGlobal Centeral Authentication Service",
+    "VERSION": "1.0.0",
+    "SWAGGER_UI_FAVICON_HREF": None,
+    "COMPONENT_SPLIT_REQUEST": True,
+    "SCHEMA_PATH_PREFIX": r"/api/",
+    "SERVE_PERMISSIONS": ["rest_framework.permissions.AllowAny"],
 }
 
 SIMPLE_JWT = {

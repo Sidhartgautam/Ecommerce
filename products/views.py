@@ -1,12 +1,19 @@
-from .serializers import ProductListSerializer,ProductDetailSerializer,CategoryListSerializer
+from .serializers import (ProductListSerializer,
+                          ProductDetailSerializer,
+                          CategoryListSerializer,
+                          CategorySerializer,
+                          PopularProductSerializer
+)
+from django.db.models import Count
+from rest_framework.views import APIView
 from .models import Product,Category
 from django.shortcuts import get_object_or_404
 from rest_framework import generics
 from rest_framework.generics import ListAPIView
-from django.http import Http404
 from core.utils.pagination import CustomPageNumberPagination
 from core.utils.response import PrepareResponse
 from rest_framework.permissions import AllowAny
+from rest_framework.exceptions import NotFound
 
 class CategoryListView(ListAPIView):
     queryset = Category.objects.filter(parent__isnull=True)  
@@ -21,6 +28,29 @@ class CategoryListView(ListAPIView):
             return PrepareResponse(
                 success=True,
                 message="Category list retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while retrieving categories.",
+                errors={"detail": str(e)}
+            ).send(code=500)
+        
+class NavbarCategoryListView(ListAPIView):
+    queryset = Category.objects.filter(parent__isnull=True) 
+    serializer_class = CategorySerializer
+    permission_classes = [AllowAny]
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+
+            return PrepareResponse(
+                success=True,
+                message="Navbar Category list retrieved successfully.",
                 data=serializer.data
             ).send(code=200)
 
@@ -130,23 +160,26 @@ class ProductDetailView(generics.RetrieveAPIView):
         
 class RecommendedProductsView(generics.ListAPIView):
     serializer_class = ProductListSerializer
+    permission_classes=[AllowAny]
 
     def get_queryset(self):
-        current_product_slug = self.request.query_params.get('product_slug') 
-        try:
-            current_product = Product.objects.get(slug=current_product_slug)
-        except Product.DoesNotExist:
-            return Product.objects.none()
+        current_product_slug = self.request.query_params.get('product_slug')
+
+        if not current_product_slug:
+            raise NotFound(detail="Product slug is required.", code=400)
+        current_product = Product.objects.filter(slug__iexact=current_product_slug).first()
+        if not current_product:
+            raise NotFound(detail=f"No product found with slug '{current_product_slug}'.", code=404)
         recommended_products = Product.objects.filter(is_active=True).exclude(id=current_product.id)
         category_products = recommended_products.filter(category=current_product.category)
         brand_products = recommended_products.filter(brand=current_product.brand)
         recommended_products = (category_products | brand_products).distinct()[:10]
-
         return recommended_products
 
     def list(self, request, *args, **kwargs):
         try:
             queryset = self.get_queryset()
+
             serializer = self.get_serializer(queryset, many=True)
             return PrepareResponse(
                 success=True,
@@ -158,6 +191,29 @@ class RecommendedProductsView(generics.ListAPIView):
             return PrepareResponse(
                 success=False,
                 message="An error occurred while fetching recommended products.",
+                errors={"detail": str(e)}
+            ).send(code=500)
+        
+class PopularProductsView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request, *args, **kwargs):
+        try:
+            popular_products = Product.objects.annotate(
+                orders_count=Count('order_items')
+            ).order_by('-orders_count')[:10]
+            serializer = PopularProductSerializer(popular_products, many=True)
+
+            return PrepareResponse(
+                success=True,
+                message="Popular products retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while retrieving popular products.",
                 errors={"detail": str(e)}
             ).send(code=500)
     

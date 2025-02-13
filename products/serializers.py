@@ -2,6 +2,11 @@ from rest_framework import serializers
 from django.db import models
 from .models import Category, Brand, Product, ProductAttribute, ProductImage
 
+class CategoryListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'slug','image']
+
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductImage
@@ -23,11 +28,13 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     attributes = ProductAttributeSerializer(many=True, read_only=True)
     images = ProductImageSerializer(many=True, read_only=True)
     format_options = serializers.SerializerMethodField()
+    category=serializers.CharField(source='category.name')
+    brand=serializers.CharField(source='brand.name')
 
     class Meta:
         model = Product
         fields = [
-            'id', 'name', 'slug', 'description', 'price', 'final_price', 'discount_label',
+            'id', 'name', 'slug','category','brand','description','stock_quantity', 'price', 'final_price', 'discount_label',
             'attributes', 'images', 'format_options'
         ]
 

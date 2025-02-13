@@ -7,7 +7,6 @@ from rest_framework.permissions import IsAuthenticated
 
 class ProductReviewListView(generics.ListAPIView):
     serializer_class = ReviewSerializer
-
     def get_queryset(self):
         product_id = self.kwargs.get('product_id')
         return Review.objects.filter(product_id=product_id, parent__isnull=True).order_by('-created_at')
@@ -28,8 +27,6 @@ class ProductReviewListView(generics.ListAPIView):
                 message="An error occurred while fetching reviews.",
                 errors={"detail": str(e)}
             ).send(code=500)
-
-
 class CreateReviewView(generics.CreateAPIView):
     serializer_class = ReviewSerializer
     permission_classes = [IsAuthenticated]

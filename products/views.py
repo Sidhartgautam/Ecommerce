@@ -1,10 +1,62 @@
-from .serializers import ProductListSerializer,ProductDetailSerializer
-from .models import Product
+from .serializers import ProductListSerializer,ProductDetailSerializer,CategoryListSerializer
+from .models import Product,Category
+from django.shortcuts import get_object_or_404
 from rest_framework import generics
+from rest_framework.generics import ListAPIView
 from django.http import Http404
 from core.utils.pagination import CustomPageNumberPagination
 from core.utils.response import PrepareResponse
 from rest_framework.permissions import AllowAny
+
+class CategoryListView(ListAPIView):
+    queryset = Category.objects.filter(parent__isnull=True)  
+    serializer_class = CategoryListSerializer
+    permission_classes = [AllowAny]
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+
+            return PrepareResponse(
+                success=True,
+                message="Category list retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while retrieving categories.",
+                errors={"detail": str(e)}
+            ).send(code=500)
+
+class ProductListByCategoryView(ListAPIView):
+    serializer_class = ProductListSerializer
+    permission_classes = [AllowAny]
+
+    def get_queryset(self):
+        category_slug = self.kwargs.get('category_slug')
+        category = get_object_or_404(Category, slug=category_slug)
+        return Product.objects.filter(category=category, is_active=True)
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+
+            return PrepareResponse(
+                success=True,
+                message="Product list retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while retrieving products.",
+                errors={"detail": str(e)}
+            ).send(code=500)
 
 class ProductListView(generics.ListAPIView):
     serializer_class = ProductListSerializer

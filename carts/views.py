@@ -28,10 +28,10 @@ class AddToCartView(APIView):
 
     def post(self, request, *args, **kwargs):
         try:
-            product_slug = request.data.get('product_slug')
+            product_id = request.data.get('product_id')
             quantity = request.data.get('quantity', 1)
             try:
-                product = Product.objects.get(slug=product_slug)
+                product = Product.objects.get(id=product_id)
             except Product.DoesNotExist:
                 return PrepareResponse(
                     success=False,
@@ -68,9 +68,9 @@ class RemoveFromCartView(APIView):
 
     def delete(self, request, *args, **kwargs):
         try:
-            product_slug = kwargs.get('product_slug')
+            product_id = kwargs.get('product_id')
             cart = Cart.objects.get(user=request.user)
-            cart_item = CartItem.objects.filter(cart=cart, product_slug=product_slug).first()
+            cart_item = CartItem.objects.filter(cart=cart, product_id=product_id).first()
 
             if not cart_item:
                 return PrepareResponse(

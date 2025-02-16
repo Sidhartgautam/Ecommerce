@@ -31,6 +31,7 @@ class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders', null=True, blank=True)
     order_id = models.CharField(max_length=12, unique=True, editable=False)
     first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100,null=True, blank=True)
     email = models.EmailField()
     phone_number = models.CharField(max_length=15)
     address = models.TextField()

@@ -23,7 +23,7 @@ def search_products(query=None, price_min=None, price_max=None, sort_price=None,
     has_brand_params = brand is not None
 
     if not any([has_product_params, has_category_params, has_brand_params]):
-        product_results = Product.objects.all()[:10]  # Default fetch if no filters are applied
+        product_results = Product.objects.all()[:10]
 
     # Category search
     if has_category_params:

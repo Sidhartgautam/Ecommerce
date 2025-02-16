@@ -4,6 +4,7 @@ from orders.serializers import OrderSerializer
 
 def create_order(user, order_data):
     first_name = order_data.get('first_name')
+    last_name = order_data.get('last_name')
     email = order_data.get('email')
     phone_number = order_data.get('phone_number')
     address = order_data.get('address')
@@ -16,6 +17,7 @@ def create_order(user, order_data):
     order = Order.objects.create(
         user=user,
         first_name=first_name,
+        last_name=last_name,
         email=email,
         phone_number=phone_number,
         address=address,

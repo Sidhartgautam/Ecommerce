@@ -1,6 +1,40 @@
 from rest_framework import serializers
+from django.conf import settings
+from django.utils.html import escape
+from urllib.parse import urljoin
 from django.db import models
 from .models import Category, Brand, Product, ProductAttribute, ProductImage
+
+class CategoryListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'slug','image']
+
+class BrandSerializer(serializers.ModelSerializer):
+    logo=serializers.SerializerMethodField()
+    class Meta:
+        model = Brand
+        fields = ['id', 'name', 'logo', 'description']
+
+    def get_logo(self, obj):
+        request = self.context.get('request')
+        logo = obj.logo
+        if logo:
+            logo_url = logo.url
+            if request:
+                return request.build_absolute_uri(logo_url)
+            return urljoin(settings.MEDIA_URL, logo_url)
+        return None
+
+class CategorySerializer(serializers.ModelSerializer):
+    subcategories = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'slug','subcategories']
+
+    def get_subcategories(self, obj):
+        return CategorySerializer(obj.subcategories.all(), many=True).data
 
 class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,11 +57,13 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     attributes = ProductAttributeSerializer(many=True, read_only=True)
     images = ProductImageSerializer(many=True, read_only=True)
     format_options = serializers.SerializerMethodField()
+    category=serializers.CharField(source='category.name')
+    brand=serializers.CharField(source='brand.name')
 
     class Meta:
         model = Product
         fields = [
-            'id', 'name', 'slug', 'description', 'price', 'final_price', 'discount_label',
+            'id', 'name', 'slug','category','brand','description','stock_quantity', 'price', 'final_price', 'discount_label',
             'attributes', 'images', 'format_options'
         ]
 
@@ -41,16 +77,12 @@ class ProductDetailSerializer(serializers.ModelSerializer):
 
     def get_format_options(self, obj):
         if obj.is_variant and obj.parent_product:
-            # Variant: Include current product, parent product, and sibling variants
             parent_product = obj.parent_product
             sibling_variants = parent_product.variants.exclude(id=obj.id)
             products = [obj, parent_product] + list(sibling_variants)
         else:
-            # Parent product: Include itself and all its variants
             variants = obj.variants.all()
             products = [obj] + list(variants)
-
-        # Serialize and return the ordered format options
         return ProductVariantOptionSerializer(products, many=True).data
 class ProductListSerializer(serializers.ModelSerializer):
     final_price = serializers.SerializerMethodField()
@@ -84,7 +116,53 @@ class ProductListSerializer(serializers.ModelSerializer):
         return obj.reviews.count()
 
     def get_image(self, obj):
+        request = self.context.get('request')
         image = obj.images.first()
         if image:
-            return image.image.url
+            image_url = image.image.url
+            if request:
+                return request.build_absolute_uri(image_url)
+            return urljoin(settings.MEDIA_URL, image_url)
         return None
+    
+class PopularProductSerializer(serializers.ModelSerializer):
+    final_price = serializers.SerializerMethodField()
+    discount_label = serializers.SerializerMethodField()
+    image = serializers.SerializerMethodField()
+    orders_count = serializers.IntegerField(read_only=True)
+    rating = serializers.SerializerMethodField()
+    reviews_count = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Product
+        fields = [
+            'id', 'name', 'slug', 'price', 'final_price', 'discount_label',
+            'orders_count', 'image', 'rating', 'reviews_count'
+        ]
+
+    def get_final_price(self, obj):
+        return obj.get_final_price()
+
+    def get_discount_label(self, obj):
+        if obj.discount_percentage > 0:
+            return f"{obj.discount_percentage}% OFF"
+        return None
+
+    def get_image(self, obj):
+        request = self.context.get('request')
+        image = obj.images.first()
+        if image:
+            image_url = image.image.url
+            if request:
+                return request.build_absolute_uri(image_url)
+            return urljoin(settings.MEDIA_URL, image_url)
+        return None
+    
+    def get_rating(self, obj):
+        reviews = obj.reviews.all()
+        if reviews.exists():
+            return round(reviews.aggregate(models.Avg('rating'))['rating__avg'], 1)
+        return None
+
+    def get_reviews_count(self, obj):
+        return obj.reviews.count()

@@ -21,19 +21,31 @@ JAZZMIN_SETTINGS = {
     # Applications to display in the sidebar
     "apps_icons": {
         "auth": "fas fa-users-cog",
-        "country": "fas fa-globe",
-        "currency": "fas fa-money-bill",
-        "faq": "fas fa-question-circle",
-        "offers": "fas fa-tags",
-        "property": "fas fa-building",
+        "products": "fas fa-product-hunt",
+        "carts": "fas fa-shopping-cart",
         "reviews": "fas fa-star",
-        "rooms": "fas fa-bed",
+        "orders": "fas fa-shopping-basket",
+        "meta": "fas fa-tags",
+        "newsletter": "fas fa-envelope",
+
         "users": "fas fa-user",
     },
 
     "icons": {
+        "accounts.EmailAddress": "fas fa-envelope",
+        "sites.Sites": "fas fa-globe",
         "auth.Group": "fas fa-users",
         "auth.User": "fas fa-user",
+        "products.Product": "fa-brands fa-product-hunt",
+        "products.Brand": "fa-solid fa-copyright",
+        "products.Category": "fas fa-list",
+        "carts.Cart": "fas fa-shopping-cart",
+        "carts.CartItem": "fas fa-shopping-cart",
+        "reviews.Review": "fas fa-star",
+        "orders.Order": "fa-solid fa-truck-fast",
+        "orders.OrderItem": "fas fa-shopping-basket",
+        "newsletter.NewsLetter": "fas fa-envelope",
+        "users.CustomUser": "fas fa-user",
     },
 
     # UI Customizations

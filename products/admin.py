@@ -1,14 +1,24 @@
 from django.contrib import admin
+from django import forms
 from django.utils.html import format_html
 from .models import Category, Brand, Product, ProductAttribute, ProductImage
 
+class ProductAttributeInlineForm(forms.ModelForm):
+    class Meta:
+        model = ProductAttribute
+        fields = ['name', 'value']
+        widgets = {
+            'value': forms.Textarea(attrs={'rows': 3, 'cols': 40}),  # Expands when needed
+        }
+
 class ProductAttributeInline(admin.TabularInline):
     model = ProductAttribute
-    extra = 1  # Number of empty fields to display initially
+    form = ProductAttributeInlineForm  # ✅ Use the custom form
+    extra = 1
     fields = ['name', 'value']
     verbose_name = "Product Attribute"
     verbose_name_plural = "Product Attributes"
-    classes=['wide']
+    classes = ['wide']
 
 # Inline for Product Images
 class ProductImageInline(admin.TabularInline):

@@ -5,7 +5,8 @@ from .views import (ProductDetailView,
                     CategoryListView,
                     ProductListByCategoryView,
                     PopularProductsView,
-                    NavbarCategoryListView
+                    NavbarCategoryListView,
+                    RecentlyAddedProductsView
 )
 
 
@@ -16,5 +17,6 @@ urlpatterns = [
     path('product/lists/', ProductListView.as_view(),name='product_list'),
     path('products/<slug:slug>/', ProductDetailView.as_view(), name='product_detail'),
     path('products/recommendation/lists/', RecommendedProductsView.as_view(), name='recommended_products'),
-    path('products/popular/', PopularProductsView.as_view(), name='popular_products'),
+    path('products/popular/lists/', PopularProductsView.as_view(), name='popular_products'),
+    path('products/recent/lists/', RecentlyAddedProductsView.as_view(), name='recently_added_products'),
 ]

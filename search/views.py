@@ -41,7 +41,7 @@ class ProductSearchView(APIView):
         if results.get('products'):
             paginator = self.pagination_class()
             paginated_products = paginator.paginate_queryset(results['products'], request)
-            product_serializer = ProductListSerializer(paginated_products, many=True)
+            product_serializer = ProductListSerializer(paginated_products, many=True, context={'request': request})
             paginated_response['products'] = paginator.get_paginated_response(product_serializer.data)
 
         # Paginate categories
@@ -55,7 +55,7 @@ class ProductSearchView(APIView):
         if results.get('brands'):
             paginator = self.pagination_class()
             paginated_brands = paginator.paginate_queryset(results['brands'], request)
-            brand_serializer = BrandSerializer(paginated_brands, many=True)
+            brand_serializer = BrandSerializer(paginated_brands, many=True, context={'request': request})
             paginated_response['brands'] = paginator.get_paginated_response(brand_serializer.data)
 
         return PrepareResponse(success=True, data=paginated_response, message="Search results retrieved successfully").send(200)

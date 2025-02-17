@@ -200,9 +200,15 @@ class PopularProductsView(APIView):
     def get(self, request, *args, **kwargs):
         try:
             popular_products = Product.objects.annotate(
-                orders_count=Count('order_items')
+                orders_count=Count('orderitem')
             ).order_by('-orders_count')[:10]
-            serializer = PopularProductSerializer(popular_products, many=True)
+            serializer = PopularProductSerializer(popular_products, many=True, context={'request': request})
+            if not popular_products.exists():
+                return PrepareResponse(
+                    success=True,
+                    message="No popular products found.",
+                    data=[]
+                ).send(code=200)
 
             return PrepareResponse(
                 success=True,
@@ -214,6 +220,34 @@ class PopularProductsView(APIView):
             return PrepareResponse(
                 success=False,
                 message="An error occurred while retrieving popular products.",
+                errors={"detail": str(e)}
+            ).send(code=500)
+        
+class RecentlyAddedProductsView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request, *args, **kwargs):
+        try:
+            recently_added_products = Product.objects.filter(is_active=True).order_by('-created_at')[:10]  
+
+            serializer = ProductListSerializer(recently_added_products, many=True, context={'request': request})          
+            if not recently_added_products.exists():
+                return PrepareResponse(
+                    success=True,
+                    message="No recently added products found.",
+                    data=[]
+                ).send(code=200)
+
+            return PrepareResponse(
+                success=True,
+                message="Recently added products retrieved successfully.",
+                data=serializer.data
+            ).send(code=200)
+
+        except Exception as e:
+            return PrepareResponse(
+                success=False,
+                message="An error occurred while retrieving recently added products.",
                 errors={"detail": str(e)}
             ).send(code=500)
     

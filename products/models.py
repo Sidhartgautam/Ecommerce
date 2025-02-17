@@ -81,7 +81,7 @@ class Product(models.Model):
 class ProductAttribute(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='attributes')
     name = models.CharField(max_length=255,help_text="Name of the attribute like 'Ingredients', 'Material', 'Size")  # Example: 'Ingredients', 'Material', 'Size'
-    value = models.CharField(max_length=255,help_text="Value of the attribute like 'Vitamin C', 'Wood', 'Large'")  # Example: 'Vitamin C', 'Wood', 'Large'
+    value = models.TextField(help_text="Value of the attribute like 'Vitamin C', 'Wood', 'Large'")
 
     def __str__(self):
         return f"{self.name}: {self.value}"

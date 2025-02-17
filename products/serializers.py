@@ -1,4 +1,7 @@
 from rest_framework import serializers
+from django.conf import settings
+from django.utils.html import escape
+from urllib.parse import urljoin
 from django.db import models
 from .models import Category, Brand, Product, ProductAttribute, ProductImage
 
@@ -8,9 +11,20 @@ class CategoryListSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'slug','image']
 
 class BrandSerializer(serializers.ModelSerializer):
+    logo=serializers.SerializerMethodField()
     class Meta:
         model = Brand
         fields = ['id', 'name', 'logo', 'description']
+
+    def get_logo(self, obj):
+        request = self.context.get('request')
+        logo = obj.logo
+        if logo:
+            logo_url = logo.url
+            if request:
+                return request.build_absolute_uri(logo_url)
+            return urljoin(settings.MEDIA_URL, logo_url)
+        return None
 
 class CategorySerializer(serializers.ModelSerializer):
     subcategories = serializers.SerializerMethodField()
@@ -102,9 +116,13 @@ class ProductListSerializer(serializers.ModelSerializer):
         return obj.reviews.count()
 
     def get_image(self, obj):
+        request = self.context.get('request')
         image = obj.images.first()
         if image:
-            return image.image.url
+            image_url = image.image.url
+            if request:
+                return request.build_absolute_uri(image_url)
+            return urljoin(settings.MEDIA_URL, image_url)
         return None
     
 class PopularProductSerializer(serializers.ModelSerializer):
@@ -131,8 +149,14 @@ class PopularProductSerializer(serializers.ModelSerializer):
         return None
 
     def get_image(self, obj):
+        request = self.context.get('request')
         image = obj.images.first()
-        return image.image.url if image else None
+        if image:
+            image_url = image.image.url
+            if request:
+                return request.build_absolute_uri(image_url)
+            return urljoin(settings.MEDIA_URL, image_url)
+        return None
     
     def get_rating(self, obj):
         reviews = obj.reviews.all()

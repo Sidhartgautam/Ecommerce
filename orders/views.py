@@ -5,6 +5,7 @@ from core.utils.order import create_order
 from orders.models import Order
 from .serializers import OrderSerializer
 from core.utils.response import PrepareResponse
+from core.utils.email import send_cancel_order_email
 
 class CreateOrderView(APIView):
     permission_classes = [IsAuthenticated]
@@ -82,6 +83,7 @@ class CancelOrderView(APIView):
 
             order.status = "Canceled"
             order.save()
+            send_cancel_order_email(order)
 
             return PrepareResponse(
                 success=True,

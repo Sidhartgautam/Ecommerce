@@ -1,12 +1,12 @@
 #!/bin/bash
 
 echo "Installing dependencies..."
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo "Applying database migrations..."
-python manage.py migrate
+python3 manage.py migrate
 
 echo "Collecting static files..."
-python manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput
 
 echo "Deployment successful!"

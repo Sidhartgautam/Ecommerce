@@ -6,9 +6,14 @@ from django.db import models
 from .models import Category, Brand, Product, ProductAttribute, ProductImage
 
 class CategoryListSerializer(serializers.ModelSerializer):
+    image=serializers.SerializerMethodField()
     class Meta:
         model = Category
         fields = ['id', 'name', 'slug','image']
+    def get_image(self, obj):
+        if obj.image:
+            return obj.image.url
+        return None
 
 class BrandSerializer(serializers.ModelSerializer):
     logo=serializers.SerializerMethodField()

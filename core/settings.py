@@ -237,12 +237,14 @@ SIMPLE_JWT = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://hotel-production-f109.up.railway.app"
+    "https://web-production-6e48c.up.railway.app"
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://192.168.1.75:3000"
+    "http://192.168.1.75:3000",
+    "https://web-production-6e48c.up.railway.app",
+    "https://house-of-nepal.vercel.app"
 
 ]
 

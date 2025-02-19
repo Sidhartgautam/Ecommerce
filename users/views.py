@@ -1,6 +1,9 @@
 from google.oauth2 import id_token
 from google.auth.transport import requests as google_requests
 from rest_framework.views import APIView
+from products.models import Product
+from django.http import JsonResponse
+from django.views import View
 from rest_framework.response import Response
 from django.conf import settings
 from rest_framework import status
@@ -117,3 +120,10 @@ class UserProfileView(APIView):
             return Response({"success": True, "message": "Profile updated successfully.", "user": serializer.data}, status=status.HTTP_200_OK)
         
         return Response({"success": False, "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+    
+class HomeView(View):
+    def get(self, request):
+        restaurants = Product.objects.all()
+        for restaurant in restaurants:
+            restaurant.save()
+        return JsonResponse({'restaurants': list(restaurants.values())})

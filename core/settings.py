@@ -16,7 +16,9 @@ from core.utils.jazzmin import *
 from decouple import config
 from urllib.parse import urlparse
 import os
-
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -52,7 +54,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google', 
     'rest_framework_simplejwt', 
-     'drf_spectacular', 
+     'drf_spectacular',
+     'cloudinary_storage',
+    'cloudinary', 
     'users', 
     'products',
     'orders',
@@ -159,18 +163,25 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Ensure static files are collected here
-
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-# Remove STATICFILES_DIRS if you're not using extra static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")] if os.path.exists(os.path.join(BASE_DIR, "static")) else []
-
-# Use Whitenoise to serve static files in production
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+cloudinary.config(
+    cloud_name="dvmqwrhbx",
+    api_key="831421472727561",
+    api_secret="IeJhUr7jhK9-qU-yjm3n_xGG3Js",
+    secure=True  # Ensures HTTPS URLs
+)
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dvmqwrhbx',
+    'API_KEY': '831421472727561',
+    'API_SECRET': 'IeJhUr7jhK9-qU-yjm3n_xGG3Js',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+MEDIA_URL = "https://res.cloudinary.com/dvmqwrhbx/"
 
 
 # Default primary key field type

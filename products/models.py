@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 from core.utils.slugify import unique_slug_generator
 
 # Category Model
@@ -7,7 +8,7 @@ class Category(models.Model):
     slug = models.SlugField(unique=True, null=True, blank=True)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='subcategories')
     description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='category_images/', blank=True, null=True)
+    image = CloudinaryField('image', null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -21,7 +22,7 @@ class Category(models.Model):
 # Brand Model
 class Brand(models.Model):
     name = models.CharField(max_length=255)
-    logo = models.ImageField(upload_to='brand_logos/', blank=True, null=True)
+    logo=CloudinaryField('image', null=True, blank=True)
     description = models.TextField(blank=True)
 
     def __str__(self):
@@ -88,7 +89,7 @@ class ProductAttribute(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='product_images/')
+    image = CloudinaryField('image', null=True, blank=True)
     alt_text = models.CharField(max_length=255, blank=True)
 
     def __str__(self):

@@ -17,13 +17,8 @@ class BrandSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'logo', 'description']
 
     def get_logo(self, obj):
-        request = self.context.get('request')
-        logo = obj.logo
-        if logo:
-            logo_url = logo.url
-            if request:
-                return request.build_absolute_uri(logo_url)
-            return urljoin(settings.MEDIA_URL, logo_url)
+        if obj.logo:
+            return obj.logo.url  # Cloudinary provides an absolute URL
         return None
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -40,6 +35,7 @@ class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductImage
         fields = ['image', 'alt_text']
+
 
 class ProductAttributeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -116,13 +112,9 @@ class ProductListSerializer(serializers.ModelSerializer):
         return obj.reviews.count()
 
     def get_image(self, obj):
-        request = self.context.get('request')
-        image = obj.images.first()
+        image = obj.images.first()  
         if image:
-            image_url = image.image.url
-            if request:
-                return request.build_absolute_uri(image_url)
-            return urljoin(settings.MEDIA_URL, image_url)
+            return image.image.url
         return None
     
 class PopularProductSerializer(serializers.ModelSerializer):
@@ -149,13 +141,9 @@ class PopularProductSerializer(serializers.ModelSerializer):
         return None
 
     def get_image(self, obj):
-        request = self.context.get('request')
-        image = obj.images.first()
+        image = obj.images.first()  
         if image:
-            image_url = image.image.url
-            if request:
-                return request.build_absolute_uri(image_url)
-            return urljoin(settings.MEDIA_URL, image_url)
+            return image.image.url
         return None
     
     def get_rating(self, obj):

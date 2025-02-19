@@ -14,6 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 from core.utils.jazzmin import *
 from decouple import config
+from urllib.parse import urlparse
 import os
 
 
@@ -99,10 +100,26 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASE_URL = config("DATABASE_URL")
+
+# Parse database credentials from DATABASE_URL
+tmpPostgres = urlparse(DATABASE_URL)
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': tmpPostgres.path.lstrip('/'),
+        'USER': tmpPostgres.username,
+        'PASSWORD': tmpPostgres.password,
+        'HOST': tmpPostgres.hostname,
+        'PORT': tmpPostgres.port or 5432,
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 

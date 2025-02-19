@@ -1,0 +1,2990 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "account",
+        "model": "emailaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "account",
+        "model": "emailconfirmation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialaccount"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialapp"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "users",
+        "model": "customuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "products",
+        "model": "productimage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "products",
+        "model": "brand"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "products",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "products",
+        "model": "productattribute"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "products",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "orders",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "orders",
+        "model": "orderitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "carts",
+        "model": "cart"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "carts",
+        "model": "cartitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "reviews",
+        "model": "review"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1xp39p14y9fowounhfrqf6vae61c7oo9",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1ti4MS:MLJSqCF6qrTLGloQic4mTGMiDqWj_eukiNEPIZS8Zk0",
+        "expire_date": "2025-02-26T04:28:32.451Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "42hycufeuw8sb8ojfc7vmpilr6l81p27",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1thMeJ:rdFKkQYdCVcy6mBbWegv9PYjdQPFlNtgmWYegeKhi9M",
+        "expire_date": "2025-02-24T05:48:03.853Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ajp1e73psmrzdlvz5lilqbnxzl7js0qm",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllm_SOU9JwhWu-ucQDZUpxUiLtDpBTQvpl5LzXiupRx7TKPE6uzAnX43RLSQ-oG-I711jS1usxT0puid9r1tbE8L7v7d1Cwl28dvPHgmULKCSUaQoj2BMgUxYHJlmJOMXu2YIjc4AG9OzKSUBiIo3p_APfNOLU:1thht3:qn6SLyrBg1pY9vUbjE040ORwkyM7tHUPF8e-7zhIggY",
+        "expire_date": "2025-02-25T04:28:41.673Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bkyeq3z1imy3ij5tm21w7k82e2xl8q6s",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1tjt3C:tPSmDiRS2k4800LRJGktfQVpDSewcrRB4kN14LtQIPs",
+        "expire_date": "2025-03-03T04:48:10.502Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kz4hgx89nicete8u0hmne2wf16pngja3",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1tkIl7:9SdRmYHEIP0zQdwaGnmlLmbahwzqkHZBw0K9Sk-QcFk",
+        "expire_date": "2025-03-04T08:15:13.717Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mi4rse82nvk254e7arz44r5xagnz357q",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1thmoG:U9yBaeoDcifvmLY3HqlhksAz0MNPoHUX8fosGHNdCsU",
+        "expire_date": "2025-02-25T09:44:04.683Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "q6izz2ihvm0kbiv1ergifjuth6d743v5",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1tkHRu:Htg362PuReYrfm0txTB9CdDXaRO_CKVXRwFoy8Plg1w",
+        "expire_date": "2025-03-04T06:51:18.290Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "toz7nmpyojuqajyzxzxgz1cms98z58uh",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1tiTbd:h6yppyYZoMEJYCLTS65RUL7dvPOCQCOAJEv-0MFiNfs",
+        "expire_date": "2025-02-27T07:25:53.986Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "u20h8vt9et8ffhk440yhpwuaw6wqbriz",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1tiR0A:SkXzEF0YzGA9SkxgdZSuR6AKEK60jTU2tFDqHVB4Gew",
+        "expire_date": "2025-02-27T04:39:02.044Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "z8p3zj6jqqvpdexanux8i8e2ngz54b5r",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFFKAWP3v0GsruwUjWQlPZk_HfbpIf2Npn3Zr4iwDLnsLQ0hTGKm1DicuwQ6J3KBuILyrNKqmWeRpSbInfa5KPG9Lnv7ukgQ8vr2mttEnQJ_NWx9dR51rpX6JnJGWUNgl0zOocDA_NguLeAKlJ0SIDi9wfyoDk6:1tftN0:uvWRxELSFZJJX-1owy_Q8NuUDSerDtzs3ozLUFHL0XM",
+        "expire_date": "2025-02-20T04:20:06.330Z"
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "socialaccount.socialapp",
+    "pk": 1,
+    "fields": {
+        "provider": "google",
+        "provider_id": "",
+        "name": "google",
+        "client_id": "386692242452-8lk1935piskqp3sejdem21nosd18c7o2.apps.googleusercontent.com",
+        "secret": "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",
+        "key": "",
+        "settings": {},
+        "sites": [
+            [
+                "example.com"
+            ]
+        ]
+    }
+},
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "Mushroom",
+        "slug": "mushroom",
+        "parent": null,
+        "description": "",
+        "image": "category_images/variant2.jpg"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "Shiitake",
+        "slug": "shiitake",
+        "parent": 1,
+        "description": "mushroom variants",
+        "image": "category_images/mushroomvariant1.jpg"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "Flammulina filiformis",
+        "slug": "flammulina-filiformis",
+        "parent": 1,
+        "description": "mushroomvariants2",
+        "image": "category_images/mushroom.jpg"
+    }
+},
+{
+    "model": "products.brand",
+    "pk": 1,
+    "fields": {
+        "name": "House of Nepal",
+        "logo": "brand_logos/houseofnepal.jpeg",
+        "description": ""
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Organic Lions Mane Mushroom Extract Powder",
+        "slug": "organic-lions-mane-mushroom-extract-powder",
+        "category": 1,
+        "brand": 1,
+        "description": "A brain superfood that helps support memory, focus, cognition & mood. Add powder to coffee, tea, smoothies, or other foods/water",
+        "price": "1350.00",
+        "stock_quantity": 7,
+        "discount_percentage": 37,
+        "is_active": true,
+        "is_variant": false,
+        "parent_product": null,
+        "format_name": "60 gm Powder",
+        "created_at": "2025-02-11T04:35:52.489Z",
+        "updated_at": "2025-02-18T08:33:22.312Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "Organic Lions Mane mushroom extract capsules",
+        "slug": "og10000",
+        "category": 1,
+        "brand": 1,
+        "description": "amkfbdjlk;nabdkln;a",
+        "price": "100.00",
+        "stock_quantity": 93,
+        "discount_percentage": 0,
+        "is_active": true,
+        "is_variant": true,
+        "parent_product": 1,
+        "format_name": "60 capsules",
+        "created_at": "2025-02-11T05:19:22.122Z",
+        "updated_at": "2025-02-14T10:48:15.154Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "name": "Lions Mane Mushroom Liquid Extract",
+        "slug": "Lions-Mane-Mushroom-Liquid-Extract",
+        "category": 1,
+        "brand": 1,
+        "description": "A brain superfood that helps support memory, focus, cognition & mood. Convenient liquid drops, take direct or add to any drink.",
+        "price": "2000.00",
+        "stock_quantity": 500,
+        "discount_percentage": 10,
+        "is_active": true,
+        "is_variant": true,
+        "parent_product": 1,
+        "format_name": "30ML Liquid",
+        "created_at": "2025-02-11T06:16:20.618Z",
+        "updated_at": "2025-02-13T04:47:57.344Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "name": "Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm",
+        "slug": "wellness-mushroom-coffee-arabica-coffee-enhanced-w",
+        "category": 1,
+        "brand": 1,
+        "description": "Great (& same) tasting coffee without the usual jitters, acidity, jitters etc. Loaded with the benefits of the brain, nerve & cardio functioning. tastes like coffee, works like magic!",
+        "price": "680.00",
+        "stock_quantity": 5,
+        "discount_percentage": 0,
+        "is_active": true,
+        "is_variant": false,
+        "parent_product": null,
+        "format_name": "100gm",
+        "created_at": "2025-02-13T06:02:00.284Z",
+        "updated_at": "2025-02-18T08:33:22.302Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "name": "Power Beets – Beet Root Powder with Amino's & Resveratrol",
+        "slug": "power-beets-beet-root-powder-with-aminos-resveratr",
+        "category": 1,
+        "brand": 1,
+        "description": "Delicious beet root super drink mix with L Arginine, L Carnitine, BCAA & resveratrol.",
+        "price": "1030.00",
+        "stock_quantity": 50,
+        "discount_percentage": 24,
+        "is_active": true,
+        "is_variant": false,
+        "parent_product": null,
+        "format_name": "250gm",
+        "created_at": "2025-02-17T05:23:10.475Z",
+        "updated_at": "2025-02-17T05:23:10.475Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "name": "Power Beets Capsules –10:1 Beet Root extract with Amino's Capsules",
+        "slug": "Power_Beets_Capsules",
+        "category": 1,
+        "brand": 1,
+        "description": "High Strength 10:1 Beet root extract with L Arginine & Grape Seed extract in easy to consumer Veg Capsules",
+        "price": "1060.00",
+        "stock_quantity": 9,
+        "discount_percentage": 29,
+        "is_active": true,
+        "is_variant": true,
+        "parent_product": 6,
+        "format_name": "60 capsules",
+        "created_at": "2025-02-17T05:23:10.482Z",
+        "updated_at": "2025-02-18T08:33:22.325Z"
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 1,
+    "fields": {
+        "product": 1,
+        "name": "Description & Benefits",
+        "value": "Lions Mane (Hericium erinaceus) is a super mushroom for your brain, used for centuries to help support cognition, memory, focus and nerve health."
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 2,
+    "fields": {
+        "product": 1,
+        "name": "Ingredients",
+        "value": "Our mushrooms are sourced from Di Tao regions in China, renowned for their high-quality, dense mushrooms. Grown organically in their natural habitat, these mushrooms benefit from the unique environment that the Di Tao regions provide. This environment inc"
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 3,
+    "fields": {
+        "product": 1,
+        "name": "How to use",
+        "value": "Naturally pleasant-tasting powder. Add 1.5-2 grams to your favorite drinks like protein shakes, green tea, smoothies, juices, or coffee. Can be enjoyed as part of a balanced diet. For those who like to experiment, it can also be added to coffee to create"
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 4,
+    "fields": {
+        "product": 5,
+        "name": "Description & Benefits",
+        "value": "Delicious tasting pure arabica instant coffee infused with lion's mane & Chaga mushrooms. Lion's mane & Chaga are superfoods that do not interfere with the taste of coffee. Lion’s mane is revered for its nootropic (cognition), brain, focus, and memory."
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 5,
+    "fields": {
+        "product": 5,
+        "name": "Benefits of mushroom coffee may improve overall",
+        "value": "wellness Elevated Focus & Clarity Boosted Energy Better Nerve Functioning Boosted Memory & Mood Stress & Anxiety Support Supports Immunity & Cardio Functioning Lesser Caffeine, Lower Acidity, No Crashes, Stomach Burns, Or Jitters!"
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 6,
+    "fields": {
+        "product": 5,
+        "name": "Ingredients",
+        "value": "Arabica Instant Coffee Infused With Lions Mane & Chaga Mushrooms."
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 7,
+    "fields": {
+        "product": 5,
+        "name": "How to use",
+        "value": "Just like you have your regular instant coffee! mix 1 tsp of mushroom coffee with or without milk and sugar per taste. enjoy a healthy & delicious cup!"
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 8,
+    "fields": {
+        "product": 6,
+        "name": "Description & Benefits",
+        "value": "Beets are widely known for boosting nitric oxide which in turn helps circulation, blood vessel health & cardio support. Our blend is further fortified with BCAA, L Arginine, L Carnitine and resveratrol for maximum health benefits, pre/post workout energy."
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 9,
+    "fields": {
+        "product": 6,
+        "name": "Ingredients",
+        "value": "Beet root powder, L-Arginine, L-Carnitine, BCAA & reservatrol."
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 10,
+    "fields": {
+        "product": 6,
+        "name": "How to use",
+        "value": "Take 1 heaping scoop (10g approx.) in 200-250ml water or your favorite beverage. 1-2 servings daily or as suggested by your healthcare professional."
+    }
+},
+{
+    "model": "products.productattribute",
+    "pk": 11,
+    "fields": {
+        "product": 7,
+        "name": "Description & Benefits",
+        "value": "Beets are widely known for boosting nitric oxide which in turn helps circulation, blood vessel health & cardio support. Our blend is further fortified with BCAA, L Arginine, L Carnitine and resveratrol for maximum health benefits, pre/post workout energy, endurance & stamina.\r\n\r\nIncludes All The Nutrients In Beetroot Including Fiber, Potassium, Manganese, Vitamin C, Zinc, Copper, And Iron. Our Beets Contain Polyphenols And Betalains, Which Are Natural Antioxidants To Neutralize Dangerous Free Radicals In The Body."
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 1,
+    "fields": {
+        "product": 1,
+        "image": "product_images/organic.jpg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 2,
+    "fields": {
+        "product": 1,
+        "image": "product_images/organic2.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 3,
+    "fields": {
+        "product": 1,
+        "image": "product_images/organic3.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 4,
+    "fields": {
+        "product": 5,
+        "image": "product_images/today.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 5,
+    "fields": {
+        "product": 5,
+        "image": "product_images/today1.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 6,
+    "fields": {
+        "product": 6,
+        "image": "product_images/beet.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 7,
+    "fields": {
+        "product": 6,
+        "image": "product_images/beet1.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 8,
+    "fields": {
+        "product": 6,
+        "image": "product_images/beet2.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "products.productimage",
+    "pk": 9,
+    "fields": {
+        "product": 7,
+        "image": "product_images/beet1_jNptQ9c.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+        "order": 1,
+        "product": 1,
+        "quantity": 2,
+        "price": "850.50"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 2,
+    "fields": {
+        "order": 1,
+        "product": 2,
+        "quantity": 1,
+        "price": "100.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 3,
+    "fields": {
+        "order": 2,
+        "product": 2,
+        "quantity": 1,
+        "price": "100.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 4,
+    "fields": {
+        "order": 3,
+        "product": 2,
+        "quantity": 2,
+        "price": "100.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 5,
+    "fields": {
+        "order": 3,
+        "product": 5,
+        "quantity": 2,
+        "price": "680.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 6,
+    "fields": {
+        "order": 4,
+        "product": 2,
+        "quantity": 3,
+        "price": "100.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 7,
+    "fields": {
+        "order": 4,
+        "product": 5,
+        "quantity": 2,
+        "price": "680.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 8,
+    "fields": {
+        "order": 5,
+        "product": 5,
+        "quantity": 1,
+        "price": "680.00"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 9,
+    "fields": {
+        "order": 5,
+        "product": 1,
+        "quantity": 1,
+        "price": "850.50"
+    }
+},
+{
+    "model": "orders.orderitem",
+    "pk": 10,
+    "fields": {
+        "order": 5,
+        "product": 7,
+        "quantity": 1,
+        "price": "752.60"
+    }
+},
+{
+    "model": "carts.cartitem",
+    "pk": 10,
+    "fields": {
+        "cart": 2,
+        "product": 4,
+        "quantity": 3
+    }
+},
+{
+    "model": "carts.cartitem",
+    "pk": 11,
+    "fields": {
+        "cart": 2,
+        "product": 1,
+        "quantity": 1
+    }
+},
+{
+    "model": "carts.cartitem",
+    "pk": 12,
+    "fields": {
+        "cart": 3,
+        "product": 5,
+        "quantity": 3
+    }
+},
+{
+    "model": "carts.cartitem",
+    "pk": 13,
+    "fields": {
+        "cart": 3,
+        "product": 2,
+        "quantity": 1
+    }
+},
+{
+    "model": "carts.cartitem",
+    "pk": 17,
+    "fields": {
+        "cart": 5,
+        "product": 1,
+        "quantity": 1
+    }
+},
+{
+    "model": "carts.cartitem",
+    "pk": 18,
+    "fields": {
+        "cart": 5,
+        "product": 4,
+        "quantity": 1
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "add_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "change_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "delete_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "view_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "add_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "change_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "delete_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "view_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "add_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "change_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "delete_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "view_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "add_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "change_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "delete_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "view_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "add_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "change_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "delete_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "view_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "users",
+            "customuser"
+        ],
+        "codename": "add_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "users",
+            "customuser"
+        ],
+        "codename": "change_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "users",
+            "customuser"
+        ],
+        "codename": "delete_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "users",
+            "customuser"
+        ],
+        "codename": "view_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product image",
+        "content_type": [
+            "products",
+            "productimage"
+        ],
+        "codename": "add_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product image",
+        "content_type": [
+            "products",
+            "productimage"
+        ],
+        "codename": "change_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product image",
+        "content_type": [
+            "products",
+            "productimage"
+        ],
+        "codename": "delete_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view product image",
+        "content_type": [
+            "products",
+            "productimage"
+        ],
+        "codename": "view_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add brand",
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "codename": "add_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change brand",
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "codename": "change_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete brand",
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "codename": "delete_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view brand",
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "codename": "view_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product",
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product",
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product",
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view product",
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product attribute",
+        "content_type": [
+            "products",
+            "productattribute"
+        ],
+        "codename": "add_productattribute"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product attribute",
+        "content_type": [
+            "products",
+            "productattribute"
+        ],
+        "codename": "change_productattribute"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product attribute",
+        "content_type": [
+            "products",
+            "productattribute"
+        ],
+        "codename": "delete_productattribute"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view product attribute",
+        "content_type": [
+            "products",
+            "productattribute"
+        ],
+        "codename": "view_productattribute"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add category",
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change category",
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete category",
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view category",
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add order",
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change order",
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete order",
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view order",
+        "content_type": [
+            "orders",
+            "order"
+        ],
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add order item",
+        "content_type": [
+            "orders",
+            "orderitem"
+        ],
+        "codename": "add_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change order item",
+        "content_type": [
+            "orders",
+            "orderitem"
+        ],
+        "codename": "change_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete order item",
+        "content_type": [
+            "orders",
+            "orderitem"
+        ],
+        "codename": "delete_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view order item",
+        "content_type": [
+            "orders",
+            "orderitem"
+        ],
+        "codename": "view_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add cart",
+        "content_type": [
+            "carts",
+            "cart"
+        ],
+        "codename": "add_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change cart",
+        "content_type": [
+            "carts",
+            "cart"
+        ],
+        "codename": "change_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete cart",
+        "content_type": [
+            "carts",
+            "cart"
+        ],
+        "codename": "delete_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view cart",
+        "content_type": [
+            "carts",
+            "cart"
+        ],
+        "codename": "view_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add cart item",
+        "content_type": [
+            "carts",
+            "cartitem"
+        ],
+        "codename": "add_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change cart item",
+        "content_type": [
+            "carts",
+            "cartitem"
+        ],
+        "codename": "change_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete cart item",
+        "content_type": [
+            "carts",
+            "cartitem"
+        ],
+        "codename": "delete_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view cart item",
+        "content_type": [
+            "carts",
+            "cartitem"
+        ],
+        "codename": "view_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add review",
+        "content_type": [
+            "reviews",
+            "review"
+        ],
+        "codename": "add_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change review",
+        "content_type": [
+            "reviews",
+            "review"
+        ],
+        "codename": "change_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete review",
+        "content_type": [
+            "reviews",
+            "review"
+        ],
+        "codename": "delete_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view review",
+        "content_type": [
+            "reviews",
+            "review"
+        ],
+        "codename": "view_review"
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$bHeKtvxVlvP0Jv4CnPqF3k$fXJ1OwBQccO7DUp4cw6sTNPk9Gu1VoJ4QFSZzNnmPvk=",
+        "last_login": "2025-02-18T08:15:13.711Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-02-06T04:19:55.358Z",
+        "email": "admin@gmail.com",
+        "phone": null,
+        "address": null,
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$9CQ6HGSQpzrwb6LJXMXLwo$IU+6goid3EACY2fTotmH5cpndS/inbmorSoaoPLWGIk=",
+        "last_login": "2025-02-11T04:28:41.668Z",
+        "is_superuser": true,
+        "username": "siddhu",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-02-06T15:36:06.638Z",
+        "email": "siddhu@gmail.com",
+        "phone": null,
+        "address": null,
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$wUIRhuaSm6GEG6KdKU8aPv$jBM4dtgDgStJyW1F/yXv38hmUF+kBy6kpEU41+oM5k8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "angela",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-10T05:50:58.955Z",
+        "email": "angellabasnet@gmail.com",
+        "phone": "9878777676",
+        "address": "pokhara",
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$lpp0SQgeFAbPTOhTeNy7qp$iuXHZqShuCi5ZMqu/YZr3fmMOl5Z9rA/NBuDyaaStis=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "perry",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-11T04:26:58.095Z",
+        "email": "perry@gmail.com",
+        "phone": "9845784551",
+        "address": "ktm",
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$QG4qTlWFF9DFJ55TAet0lN$W1+GEh+7vHosb2jZWI6hiaKgwe9w36x5VEUakiargm4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "shayne",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-11T07:02:08.176Z",
+        "email": "shayne@gmail.com",
+        "phone": "9812345787",
+        "address": "",
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$hOXmhDHEcH17tg19c5xhik$bHLoc7VX++nNp24cnSC1Q7venLM+I4Z3pQSPDreN374=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sujit",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-14T04:57:28.838Z",
+        "email": "10sujitkhanal@gmail.com",
+        "phone": null,
+        "address": null,
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$k3ucYhNi1Wl81Y3vGVRwMD$JYnmBJ+9AjgBagf9ytCCjl0AsbEQAGVTMZ6pX5yTQ6M=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "john",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-18T08:23:07.559Z",
+        "email": "john@gmail.com",
+        "phone": "9745462315",
+        "address": "ktm",
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$fv81VKtSWZA7IHqvLerztm$ZzrjvsTI9wou2KoRnkYTavbJRZQKkdALzJYjDuapcTs=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "navin",
+        "first_name": "navin",
+        "last_name": "lamsal",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-18T09:21:06.352Z",
+        "email": "navinlamsal11@gmail.com",
+        "phone": null,
+        "address": null,
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$oZDJfFctJUeUsoPL4nNeX4$hjUMcoT6Au6RpjUhAKjzfj0taKKdckcOeYdnH+P9tUw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "diana",
+        "first_name": "Diana",
+        "last_name": "Smith",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-18T09:22:56.062Z",
+        "email": "diana@gmail.com",
+        "phone": "9845756315",
+        "address": "ktm",
+        "profile_picture": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "siddhu"
+        ],
+        "order_id": "MDSSAC6Q2W3Z",
+        "first_name": "John Doe",
+        "last_name": null,
+        "email": "johndoe@example.com",
+        "phone_number": "+123456789",
+        "address": "123 Main Street, New York, NY",
+        "status": "Canceled",
+        "payment_method": "COD",
+        "payment_status": "Unpaid",
+        "total_price": "1801.00",
+        "created_at": "2025-02-14T04:25:54.769Z",
+        "updated_at": "2025-02-14T04:36:54.214Z"
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "siddhu"
+        ],
+        "order_id": "2VR902AR8UKP",
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "johndoe@example.com",
+        "phone_number": "+123456789",
+        "address": "123 Main Street, New York, NY",
+        "status": "Pending",
+        "payment_method": "COD",
+        "payment_status": "Unpaid",
+        "total_price": "100.00",
+        "created_at": "2025-02-14T04:39:15.660Z",
+        "updated_at": "2025-02-14T04:39:15.678Z"
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "angela"
+        ],
+        "order_id": "UL6DJCFG4Q1O",
+        "first_name": "Angela",
+        "last_name": null,
+        "email": "angellabasnet@gmail.com",
+        "phone_number": "9845784596",
+        "address": "pokhara",
+        "status": "Pending",
+        "payment_method": "COD",
+        "payment_status": "Unpaid",
+        "total_price": "1560.00",
+        "created_at": "2025-02-14T08:55:34.715Z",
+        "updated_at": "2025-02-14T08:55:34.750Z"
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "angela"
+        ],
+        "order_id": "KEVWBQSL9Y9J",
+        "first_name": "angela",
+        "last_name": null,
+        "email": "angela@gmail.com",
+        "phone_number": "9856451246",
+        "address": "ktm",
+        "status": "Pending",
+        "payment_method": "COD",
+        "payment_status": "Unpaid",
+        "total_price": "1660.00",
+        "created_at": "2025-02-14T10:48:15.143Z",
+        "updated_at": "2025-02-14T10:48:15.178Z"
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "john"
+        ],
+        "order_id": "Q054U0GE5TZD",
+        "first_name": "john",
+        "last_name": null,
+        "email": "john@gmail.com",
+        "phone_number": "9745462315",
+        "address": "ktm",
+        "status": "Pending",
+        "payment_method": "COD",
+        "payment_status": "Unpaid",
+        "total_price": "2283.10",
+        "created_at": "2025-02-18T08:33:22.293Z",
+        "updated_at": "2025-02-18T08:33:22.336Z"
+    }
+},
+{
+    "model": "carts.cart",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "siddhu"
+        ],
+        "created_at": "2025-02-12T04:45:14.126Z"
+    }
+},
+{
+    "model": "carts.cart",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "angela"
+        ],
+        "created_at": "2025-02-13T06:30:18.494Z"
+    }
+},
+{
+    "model": "carts.cart",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "perry"
+        ],
+        "created_at": "2025-02-18T08:13:29.746Z"
+    }
+},
+{
+    "model": "carts.cart",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "john"
+        ],
+        "created_at": "2025-02-18T08:28:21.926Z"
+    }
+},
+{
+    "model": "carts.cart",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "diana"
+        ],
+        "created_at": "2025-02-18T09:23:47.011Z"
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 1,
+    "fields": {
+        "product": 1,
+        "user": [
+            "siddhu"
+        ],
+        "parent": null,
+        "rating": 5,
+        "comment": "This is an amazing product! Highly recommend.",
+        "created_at": "2025-02-14T04:55:17.569Z",
+        "updated_at": "2025-02-14T04:55:17.569Z"
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 2,
+    "fields": {
+        "product": 1,
+        "user": [
+            "sujit"
+        ],
+        "parent": 1,
+        "rating": null,
+        "comment": "Thank you for your feedback!",
+        "created_at": "2025-02-14T05:17:16.408Z",
+        "updated_at": "2025-02-14T05:17:16.408Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-02-06T04:20:57.976Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "object_id": "1",
+        "object_repr": "google",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-02-11T04:33:11.538Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Mushroom",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-02-11T04:34:24.763Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "object_id": "1",
+        "object_repr": "House of Nepal",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-02-11T04:35:52.490Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-02-11T04:41:44.169Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product attribute\", \"object\": \"Description & Benefits: Lions Mane (Hericium erinaceus) is a super mushroom for your brain, used for centuries to help support cognition, memory, focus and nerve health.\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"Ingredients: Our mushrooms are sourced from Di Tao regions in China, renowned for their high-quality, dense mushrooms. Grown organically in their natural habitat, these mushrooms benefit from the unique environment that the Di Tao regions provide. This environment inc\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"How to use: Naturally pleasant-tasting powder. Add 1.5-2 grams to your favorite drinks like protein shakes, green tea, smoothies, juices, or coffee. Can be enjoyed as part of a balanced diet. For those who like to experiment, it can also be added to coffee to create\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-02-11T04:59:18.768Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-02-11T05:00:34.360Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-02-11T05:19:22.123Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product\", \"object\": \"Organic Lions Mane mushroom extract capsules\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-02-11T05:21:29.970Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder - Organic Lions Mane mushroom extract capsules",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Is variant\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-02-11T05:44:23.583Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-02-11T05:46:18.532Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-02-11T05:49:18.678Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-02-11T06:05:19.241Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-02-11T06:11:39.030Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product\", \"object\": \"Lions Mane Mushroom Liquid Extract\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-02-11T06:14:58.851Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "Lions Mane Mushroom Liquid Extract",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-02-11T06:16:20.619Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product\", \"object\": \"Organic Lions Mane Mushroom Extract Powder - Lions Mane Mushroom Liquid Extract\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-02-11T07:41:41.889Z",
+        "user": [
+            "siddhu"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder - Lions Mane Mushroom Liquid Extract",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-02-13T04:42:22.403Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Mushroom",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-02-13T04:42:43.599Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Handicraft",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-02-13T04:47:57.351Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder - Lions Mane Mushroom Liquid Extract",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Discount percentage\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-02-13T05:42:32.244Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder - Organic Lions Mane mushroom extract capsules",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-02-13T05:43:42.021Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder - Organic Lions Mane mushroom extract capsules",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-02-13T06:02:00.305Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"Description & Benefits: Delicious tasting pure arabica instant coffee infused with lion's mane & Chaga mushrooms. Lion's mane & Chaga are superfoods that do not interfere with the taste of coffee. Lion\\u2019s mane is revered for its nootropic (cognition), brain, focus, and memory.\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"Benefits of mushroom coffee may improve overall: wellness Elevated Focus & Clarity Boosted Energy Better Nerve Functioning Boosted Memory & Mood Stress & Anxiety Support Supports Immunity & Cardio Functioning Lesser Caffeine, Lower Acidity, No Crashes, Stomach Burns, Or Jitters!\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"Ingredients: Arabica Instant Coffee Infused With Lions Mane & Chaga Mushrooms.\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"How to use: Just like you have your regular instant coffee! mix 1 tsp of mushroom coffee with or without milk and sugar per taste. enjoy a healthy & delicious cup!\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-02-14T04:11:22.403Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Shiitake",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-02-14T04:12:32.115Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Flammulina filiformis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-02-14T05:01:59.580Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "reviews",
+            "review"
+        ],
+        "object_id": "2",
+        "object_repr": "Review by sujit on Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-02-17T05:02:04.116Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Flammulina filiformis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-02-17T05:02:22.333Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Flammulina filiformis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-02-17T05:02:38.281Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Shiitake",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-02-17T05:02:49.031Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Handicraft",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-02-17T05:03:01.396Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Mushroom",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-02-17T05:05:36.600Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Flammulina filiformis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-02-17T05:05:46.916Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Flammulina filiformis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-02-17T05:05:53.915Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Mushroom",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-02-17T05:06:10.272Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "object_id": "1",
+        "object_repr": "House of Nepal",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-02-17T05:06:34.476Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Image for Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Image for Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm\", \"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-02-17T05:06:40.935Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-02-17T05:07:25.205Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\", \"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-02-17T05:08:52.153Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-02-17T05:09:24.258Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Organic Lions Mane Mushroom Extract Powder",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Image for Organic Lions Mane Mushroom Extract Powder\", \"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-02-17T05:10:25.889Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Image for Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Image for Wellness Mushroom Coffee - Arabica Coffee Enhanced with Superfood Mushrooms | 100gm\", \"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-02-17T05:11:13.305Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "brand"
+        ],
+        "object_id": "1",
+        "object_repr": "House of Nepal",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-02-17T05:11:25.322Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Flammulina filiformis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-02-17T05:11:33.107Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Shiitake",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-02-17T05:11:40.734Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Mushroom",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-02-17T05:23:10.482Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "6",
+        "object_repr": "Power Beets – Beet Root Powder with Amino's & Resveratrol",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"Description & Benefits: Beets are widely known for boosting nitric oxide which in turn helps circulation, blood vessel health & cardio support. Our blend is further fortified with BCAA, L Arginine, L Carnitine and resveratrol for maximum health benefits, pre/post workout energy.\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"Ingredients: Beet root powder, L-Arginine, L-Carnitine, BCAA & reservatrol.\"}}, {\"added\": {\"name\": \"product attribute\", \"object\": \"How to use: Take 1 heaping scoop (10g approx.) in 200-250ml water or your favorite beverage. 1-2 servings daily or as suggested by your healthcare professional.\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Power Beets \\u2013 Beet Root Powder with Amino's & Resveratrol\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Power Beets \\u2013 Beet Root Powder with Amino's & Resveratrol\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Image for Power Beets \\u2013 Beet Root Powder with Amino's & Resveratrol\"}}, {\"added\": {\"name\": \"product\", \"object\": \"Power Beets \\u2013 Beet Root Powder with Amino's & Resveratrol - Power Beets Capsules \\u201310:1 Beet Root extract with Amino's Capsules\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-02-17T05:24:50.347Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "Power Beets – Beet Root Powder with Amino's & Resveratrol - Power Beets Capsules –10:1 Beet Root extract with Amino's Capsules",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-02-17T05:24:58.307Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "Power Beets – Beet Root Powder with Amino's & Resveratrol - Power Beets Capsules –10:1 Beet Root extract with Amino's Capsules",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2025-02-17T05:30:46.989Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "Power Beets – Beet Root Powder with Amino's & Resveratrol - Power Beets Capsules –10:1 Beet Root extract with Amino's Capsules",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product attribute\", \"object\": \"Description & Benefits: Beets are widely known for boosting nitric oxide which in turn helps circulation, blood vessel health & cardio support. Our blend is further fortified with BCAA, L Arginine, L Carnitine and resveratrol for maximum health benefits, pre/post workout energy, endurance & stamina.\\r\\n\\r\\nIncludes All The Nutrients In Beetroot Including Fiber, Potassium, Manganese, Vitamin C, Zinc, Copper, And Iron. Our Beets Contain Polyphenols And Betalains, Which Are Natural Antioxidants To Neutralize Dangerous Free Radicals In The Body.\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2025-02-17T05:31:02.255Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "Power Beets – Beet Root Powder with Amino's & Resveratrol - Power Beets Capsules –10:1 Beet Root extract with Amino's Capsules",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Image for Power Beets Capsules \\u201310:1 Beet Root extract with Amino's Capsules\"}}]"
+    }
+}
+]

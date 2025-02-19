@@ -32,9 +32,14 @@ class CategorySerializer(serializers.ModelSerializer):
         return CategorySerializer(obj.subcategories.all(), many=True).data
 
 class ProductImageSerializer(serializers.ModelSerializer):
+    image=serializers.SerializerMethodField()
     class Meta:
         model = ProductImage
         fields = ['image', 'alt_text']
+    def get_image(self, obj):
+        if obj.image:
+            return obj.image.url
+        return None
 
 
 class ProductAttributeSerializer(serializers.ModelSerializer):

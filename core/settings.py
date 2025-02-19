@@ -259,7 +259,6 @@ CORS_ALLOWED_METHODS = [
     'DELETE',
     'OPTIONS',
 ]
-CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOW_HEADERS = [
     'authorization',

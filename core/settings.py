@@ -14,6 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 from core.utils.jazzmin import *
 from decouple import config
+import os
 
 
 
@@ -63,6 +64,7 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -141,12 +143,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
-import os
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Ensure static files are collected here
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Remove STATICFILES_DIRS if you're not using extra static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")] if os.path.exists(os.path.join(BASE_DIR, "static")) else []
+
+# Use Whitenoise to serve static files in production
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type

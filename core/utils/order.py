@@ -1,6 +1,7 @@
 from orders.models import Order, OrderItem
 from carts.models import Cart
 from orders.serializers import OrderSerializer
+from core.utils.email import send_order_email
 
 def create_order(user, order_data):
     first_name = order_data.get('first_name')
@@ -39,5 +40,6 @@ def create_order(user, order_data):
     order.calculate_total_price()
 
     cart.items.all().delete()
+    send_order_email(order)
 
     return order, True, None

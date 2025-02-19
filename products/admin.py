@@ -1,19 +1,26 @@
 from django.contrib import admin
 from django import forms
+from django.contrib.sites.models import Site
+from allauth.account.models import EmailAddress
+from allauth.socialaccount.models import SocialAccount
 from django.utils.html import format_html
 from .models import Category, Brand, Product, ProductAttribute, ProductImage
+
+admin.site.unregister(Site)
+admin.site.unregister(EmailAddress)
+admin.site.unregister(SocialAccount)
 
 class ProductAttributeInlineForm(forms.ModelForm):
     class Meta:
         model = ProductAttribute
         fields = ['name', 'value']
         widgets = {
-            'value': forms.Textarea(attrs={'rows': 3, 'cols': 40}),  # Expands when needed
+            'value': forms.Textarea(attrs={'rows': 3, 'cols': 40}),
         }
 
 class ProductAttributeInline(admin.TabularInline):
     model = ProductAttribute
-    form = ProductAttributeInlineForm  # ✅ Use the custom form
+    form = ProductAttributeInlineForm  
     extra = 1
     fields = ['name', 'value']
     verbose_name = "Product Attribute"

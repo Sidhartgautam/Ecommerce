@@ -99,6 +99,9 @@ class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     inlines = [ProductAttributeInline, ProductImageInline, ProductVariantInline]
 
+    def get_queryset(self, request):
+        return super().get_queryset(request).prefetch_related('attributes', 'images')
+
     def status(self, obj):
         status = obj.check_status()
         if "Incomplete" in status:

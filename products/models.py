@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from core.utils.slugify import unique_slug_generator
+from django.utils.text import slugify
 
 # Category Model
 class Category(models.Model):
@@ -62,7 +63,12 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = unique_slug_generator(self, self.name)
+            if self.parent_product:  
+                base_name = self.name.strip()  
+                self.slug = slugify(base_name)
+            else:
+                base_name = self.name.strip()
+                self.slug = unique_slug_generator(self, base_name)
         if self.parent_product:
             self.category = self.parent_product.category
             self.brand = self.parent_product.brand

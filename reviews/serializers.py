@@ -4,10 +4,11 @@ from .models import Review
 class ReviewSerializer(serializers.ModelSerializer):
     replies = serializers.SerializerMethodField()
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    username=serializers.ReadOnlyField(source='user.username')
 
     class Meta:
         model = Review
-        fields = ['id', 'product', 'user', 'rating', 'comment', 'parent', 'replies', 'created_at', 'updated_at']
+        fields = ['id', 'product', 'user','username', 'rating', 'comment', 'parent', 'replies', 'created_at', 'updated_at']
         read_only_fields = ['created_at', 'updated_at']
 
     def get_replies(self, obj):

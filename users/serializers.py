@@ -21,7 +21,13 @@ class CustomUserSerializer(serializers.ModelSerializer):
         return super().create(validated_data)
     
 class UserProfileSerializer(serializers.ModelSerializer):
+    profile_picture=serializers.SerializerMethodField()
     class Meta:
         model = CustomUser
         fields = ['id', 'username', 'email', 'phone', 'address', 'profile_picture', 'first_name', 'last_name']
         read_only_fields = ['id', 'username', 'email']
+    
+    def get_profile_picture(self, obj):
+        if obj.profile_picture:
+            return obj.profile_picture.url
+        return None

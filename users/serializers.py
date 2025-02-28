@@ -31,3 +31,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
         if obj.profile_picture:
             return obj.profile_picture.url
         return None
+    
+    def update(self, instance, validated_data):
+        if 'profile_picture' in self.context['request'].FILES:
+            instance.profile_picture = self.context['request'].FILES['profile_picture']
+        return super().update(instance, validated_data)

@@ -1,3 +1,4 @@
-mkdir -p static staticfiles
-python3 -m pip install -r requirements.txt
-python3 manage.py collectstatic
+mkdir -p static
+export STATIC_ROOT=static
+pip3 install -r requirements.txt
+python3 manage.py collectstatic --noinput

@@ -165,6 +165,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATIC_URL = "/static/"
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+# Vercel serves static files from here
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+# Enable Whitenoise for handling static files efficiently
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 cloudinary.config(
     cloud_name="dvmqwrhbx",
@@ -182,8 +192,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MEDIA_URL = "https://res.cloudinary.com/dvmqwrhbx/"
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 
 
 

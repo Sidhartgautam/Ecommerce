@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Cart, CartItem
 
 class CartItemSerializer(serializers.ModelSerializer):
+    product_id = serializers.IntegerField(source='product.id', read_only=True)
     product_name = serializers.CharField(source='product.name', read_only=True)
     product_price = serializers.DecimalField(source='product.price', read_only=True, max_digits=10, decimal_places=2)
     total_price = serializers.SerializerMethodField()
@@ -9,7 +10,7 @@ class CartItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CartItem
-        fields = ['id', 'product', 'product_name', 'product_price', 'quantity', 'total_price', 'product_image']
+        fields = ['id','product_id', 'product', 'product_name', 'product_price', 'quantity', 'total_price', 'product_image']
 
     def get_total_price(self, obj):
         return obj.total_price()
